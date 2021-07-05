@@ -1,0 +1,205 @@
+/*****************************************************************************
+**
+**    Title:      style.css
+**    Project:    Personal Portfolio
+**    Author:     Joe Cohen
+**    Contact:    <deskofjoe@gmail.com>
+**    GitHub:     https://github.com/cojohen
+**
+**    Copyright 2021 Joe Cohen -- Permission is hereby granted, free of
+**    charge, to any person obtaining a copy of this software and 
+**    associated documentation files (the "Software"), to deal in the 
+**    Software without restriction, including without limitation the 
+**    rights to use, copy, modify, merge, publish, distribute, sublicense,
+**    and/or sell copies of the Software, and to permit persons to whom 
+**    the Software is furnished to do so, subject to the following 
+**    conditions:
+**
+**    The above copyright notice and this permission notice shall be included 
+**    in all copies or substantial portions of the Software.
+** 
+*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    //padding: 0;
+    margin: 0;
+    height: 100%;
+    background: #00509D;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+#navbar {
+    background: #00509d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 3;
+}
+
+#navbar a {
+    display: inline-block;
+    padding: 1em;
+    margin: 0 .3em;
+    font-size: 15pt;
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar a:last-child {
+    margin-right: 2em;
+}
+
+#navbar a:hover {color: #FDC500}
+
+#main {
+    width: 100%;
+    margin: 0;
+}
+
+#welcome-section {
+    height: 100vh;
+    background: #00296b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#welcome-section h1 {
+    font-size: 8rem;
+    margin: 0;
+    text-align: left;
+    line-height: 1em;
+}
+#welcome-section p {
+    font-size: 2rem;
+    color: #fdc500;
+    margin: 0;
+    line-height: 2em;
+}
+
+#projects {
+    background: #fdc500;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "tiles tiles tiles tiles";
+    padding: 0 1em;
+    margin: 0;
+    height: 80vh;
+    align-items: center;
+}
+
+#projects h2 {
+    font-size: 5rem;
+    grid-area: header;
+    text-align: center;
+    align-content: center;
+    text-decoration: underline;
+}
+
+#tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: tiles;
+    margin-bottom: 2em;
+}
+
+#projects .project-tile {
+    display: block;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 9px #686868;
+    position: relative;
+    overflow: hidden;
+}
+
+#projects .project-tile img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#projects .project-tile p {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    z-index: 10;
+    background: rgba(120, 120, 120, .9);
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fdc500;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+    text-shadow: 0px 0px 1px black;;
+}
+
+#projects .project-tile:hover p {
+    bottom: -20px;
+}
+
+
+#contact {
+    background: #00296b;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact h2 {
+    font-size: 6rem;
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+}
+#contact p {
+    font-size: 2rem;
+    color: #fdc500;
+    margin: 0;
+    line-height: 2em;
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 23rem;
+    margin-top: 2em;
+}
+
+#contact-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+#contact-links a:hover {
+    transform: translate(0, -6px);
+}
+#contact-links a i {
+    margin-right: 10px;
+}
+
+@media screen {
+    
+}
